@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+@keyframes rota {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+
+
+header{
+  display: grid;
+  grid-template-columns: 15% 85%;
+  height: 70px;
+  border-bottom: 1px solid blue;
+  position: sticky;
+  top: 0;
+
+  i {
+    color: #808793;
+  }
+
+  .fa-gear {
+    animation: 3s rota linear infinite;
+  }
+
+  .header-left{
+    background-color: #1E293B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-right{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+
+    .right-side {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .ddd {
+      position: relative;
+    }
+
+    .ddd::after {
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      content: '4';
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .d-1::after {
+      background-color: red;
+    }
+
+    .d-2::after {
+      background-color: green;
+    }
+
+    .logo_1{
+      width: 22px;
+      height: 22px;
+    }
+
+    .logo_2{
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+  }
+}
+
+main {
+  display: grid;
+  grid-template-columns: 15% 85%;
+
+  .side-panel {
+    background-color: #1E293B;
+    height: 100vh;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+     .name{
+      display: flex;
+      justify-content: space-between;
+      div{
+        gap: 15px;
+        display: flex;
+      }
+     }
+     .dot{
+      display: flex;
+      gap: 15px;
+     }
+  }
+
+  .base {
+    background-color: red;
+    height: 100vh;
+  }
+}
